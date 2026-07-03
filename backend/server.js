@@ -24,12 +24,15 @@ const app = express();
 
 // --- Security & core middleware ---
 app.use(helmet({ crossOriginResourcePolicy: false })); // allow serving images cross-origin
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',') : '*',
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',') : '*',
+//     credentials: true,
+//   })
+// );
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
