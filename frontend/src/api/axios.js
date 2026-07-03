@@ -2,9 +2,13 @@ import axios from 'axios';
 
 // Central Axios instance. baseURL comes from env so dev/staging/prod
 // can point at different API hosts without code changes.
+  // const api = axios.create({
+  //   baseURL: import.meta.env.VITE_API_URL || '/api',
+  //   withCredentials: true, // send the httpOnly auth cookie automatically
+  // });
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
-  withCredentials: true, // send the httpOnly auth cookie automatically
+  baseURL: "...",
+  withCredentials: true
 });
 
 // Attach bearer token as a fallback for environments where cookies
