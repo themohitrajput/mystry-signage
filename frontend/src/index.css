@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-paper font-body antialiased;
+}
+
+/* Visible keyboard focus everywhere, incl. custom components */
+:focus-visible {
+  outline: 2px solid theme('colors.amber.DEFAULT');
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Signature element: illuminated "tube" underline used on section eyebrows
+   and the logotype, evoking a lit neon sign tube without being a gimmick. */
+.tube-underline {
+  position: relative;
+  display: inline-block;
+}
+.tube-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor, 0 0 18px currentColor;
+  opacity: 0.85;
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 12px rgba(255, 122, 41, 0.55);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(47, 230, 230, 0.55);
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-amber px-6 py-3 font-body font-semibold text-ink shadow-neonAmber transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-neonAmber active:translate-y-0;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border border-ash/40 px-6 py-3 font-body font-semibold text-paper transition-colors duration-200 hover:border-cyan hover:text-cyan;
+}
+
+.input-field {
+  @apply w-full rounded-md border border-ash/30 bg-panel px-4 py-3 text-paper placeholder:text-ash/70 focus:border-amber focus:outline-none transition-colors;
+}
+
+.label-field {
+  @apply mb-1.5 block text-sm font-medium text-ash;
+}
+
+.eyebrow {
+  @apply font-mono text-xs uppercase tracking-[0.25em] text-amber;
+}
