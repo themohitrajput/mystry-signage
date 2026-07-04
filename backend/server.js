@@ -32,7 +32,7 @@ app.use(
   })
 );
 
-const allowedOrigins = (process.env.CORS_ORIGIN || 'https://mystry-signage-1.onrender.com,https://mystry-signage.onrender.com,http://localhost:5173,http://localhost:3000')
+const allowedOrigins = (process.env.CORS_ORIGIN || 'https://www.mistrysignage.in,https://mystry-signage-1.onrender.com,https://mystry-signage.onrender.com,http://localhost:5173,http://localhost:3000')
   .split(',')
   .map((origin) => origin.trim())
   .filter(Boolean);
