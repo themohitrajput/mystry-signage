@@ -1,12 +1,18 @@
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle } from "lucide-react";
 
 // Floating WhatsApp CTA. Opens WhatsApp (app or web) with a pre-filled
 // message, using the number from admin-editable contact settings.
 export default function WhatsAppButton({ number }) {
-  const cleanNumber = (number || import.meta.env.VITE_WHATSAPP_NUMBER || '').replace(/\D/g, '');
+  const cleanNumber = (
+    number ||
+    import.meta.env.VITE_WHATSAPP_NUMBER ||
+    ""
+  ).replace(/\D/g, "");
   if (!cleanNumber) return null;
 
-  const message = encodeURIComponent("Hi Mystry Signage! I'd like to enquire about signage for my business.");
+  const message = encodeURIComponent(
+    "Hi Mistry Signage! I'd like to enquire about signage for my business.",
+  );
   const href = `https://wa.me/${cleanNumber}?text=${message}`;
 
   return (

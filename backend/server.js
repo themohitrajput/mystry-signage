@@ -34,7 +34,7 @@ app.use(
 
 app.use(
   cors({
-    origin: "https://mystry-signage-1.onrender.com",
+    origin: "https://Mistry-signage-1.onrender.com",
     credentials: true,
   })
 );
@@ -69,7 +69,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
-    message: 'Mystry Signage API is running',
+    message: 'Mistry Signage API is running',
   });
 });
 

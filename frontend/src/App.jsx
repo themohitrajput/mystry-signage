@@ -1,30 +1,30 @@
-import { Routes, Route } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import { HelmetProvider } from 'react-helmet-async';
-import { AuthProvider } from './context/AuthContext';
-import ProtectedRoute from './components/common/ProtectedRoute';
+import { Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import { HelmetProvider } from "react-helmet-async";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/common/ProtectedRoute";
 
-import PublicLayout from './components/layout/PublicLayout';
-import AdminLayout from './components/admin/AdminLayout';
+import PublicLayout from "./components/layout/PublicLayout";
+import AdminLayout from "./components/admin/AdminLayout";
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Portfolio from './pages/Portfolio';
-import ProjectDetail from './pages/ProjectDetail';
-import Categories from './pages/Categories';
-import CategoryDetail from './pages/CategoryDetail';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import ProjectDetail from "./pages/ProjectDetail";
+import Categories from "./pages/Categories";
+import CategoryDetail from "./pages/CategoryDetail";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
-import Login from './pages/admin/Login';
-import Dashboard from './pages/admin/Dashboard';
-import ManageProjects from './pages/admin/ManageProjects';
-import ProjectForm from './pages/admin/ProjectForm';
-import ManageCategories from './pages/admin/ManageCategories';
-import CategoryForm from './pages/admin/CategoryForm';
-import ManageContent from './pages/admin/ManageContent';
-import Messages from './pages/admin/Messages';
-import ChangePassword from './pages/admin/ChangePassword';
+import Login from "./pages/admin/Login";
+import Dashboard from "./pages/admin/Dashboard";
+import ManageProjects from "./pages/admin/ManageProjects";
+import ProjectForm from "./pages/admin/ProjectForm";
+import ManageCategories from "./pages/admin/ManageCategories";
+import CategoryForm from "./pages/admin/CategoryForm";
+import ManageContent from "./pages/admin/ManageContent";
+import Messages from "./pages/admin/Messages";
+import ChangePassword from "./pages/admin/ChangePassword";
 
 export default function App() {
   return (
@@ -33,7 +33,11 @@ export default function App() {
         <Toaster
           position="top-right"
           toastOptions={{
-            style: { background: '#1E2128', color: '#F5F3EE', border: '1px solid rgba(154,160,168,0.2)' },
+            style: {
+              background: "var(--color-panel)",
+              color: "var(--color-paper)",
+              border: "1px solid var(--color-ash)",
+            },
           }}
         />
         <Routes>

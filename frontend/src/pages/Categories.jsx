@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import api from '../api/axios';
-import SEO from '../components/common/SEO';
-import Loader from '../components/common/Loader';
-import CategoryCard from '../components/categories/CategoryCard';
+import { useEffect, useState } from "react";
+import api from "../api/axios";
+import SEO from "../components/common/SEO";
+import Loader from "../components/common/Loader";
+import CategoryCard from "../components/categories/CategoryCard";
 
 export default function Categories() {
   const [categories, setCategories] = useState([]);
@@ -10,18 +10,23 @@ export default function Categories() {
 
   useEffect(() => {
     api
-      .get('/categories')
+      .get("/categories")
       .then((res) => setCategories(res.data.data))
       .finally(() => setLoading(false));
   }, []);
 
   return (
     <>
-      <SEO title="Project Categories" description="Browse Mystry Signage's project categories: neon signs, acrylic & LED boards, hoardings, vehicle branding and more." />
+      <SEO
+        title="Project Categories"
+        description="Browse Mistry Signage's project categories: neon signs, acrylic & LED boards, hoardings, vehicle branding and more."
+      />
       <section className="bg-ink py-16">
         <div className="container-page">
           <p className="eyebrow mb-3">Browse by Type</p>
-          <h1 className="font-display text-3xl text-paper sm:text-4xl">Project Categories</h1>
+          <h1 className="font-display text-3xl text-paper sm:text-4xl">
+            Project Categories
+          </h1>
 
           <div className="mt-10">
             {loading ? (

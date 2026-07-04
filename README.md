@@ -1,6 +1,6 @@
-# Mystry Signage — Full-Stack Website (MERN)
+# Mistry Signage — Full-Stack Website (MERN)
 
-A production-ready website + admin CMS for Mystry Signage, built with MongoDB, Express, React (Vite), and Node.js.
+A production-ready website + admin CMS for Mistry Signage, built with MongoDB, Express, React (Vite), and Node.js.
 
 ## What's included
 
@@ -34,7 +34,7 @@ A production-ready website + admin CMS for Mystry Signage, built with MongoDB, E
 ## Folder structure
 
 ```
-mystry-signage/
+Mistry-signage/
 ├── backend/
 │   ├── config/         # DB connection
 │   ├── models/         # Mongoose schemas (Admin, Project, Category, Message, SiteContent)

@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import api from '../api/axios';
-import SEO from '../components/common/SEO';
-import Loader from '../components/common/Loader';
-import Hero from '../components/home/Hero';
-import WhyUs from '../components/home/WhyUs';
-import CategoriesShowcase from '../components/home/CategoriesShowcase';
-import FeaturedProjects from '../components/home/FeaturedProjects';
+import { useEffect, useState } from "react";
+import api from "../api/axios";
+import SEO from "../components/common/SEO";
+import Loader from "../components/common/Loader";
+import Hero from "../components/home/Hero";
+import WhyUs from "../components/home/WhyUs";
+import CategoriesShowcase from "../components/home/CategoriesShowcase";
+import FeaturedProjects from "../components/home/FeaturedProjects";
 
 export default function Home() {
   const [content, setContent] = useState(null);
@@ -17,9 +17,9 @@ export default function Home() {
     (async () => {
       try {
         const [contentRes, catRes, projRes] = await Promise.all([
-          api.get('/content'),
-          api.get('/categories'),
-          api.get('/projects', { params: { featured: true, limit: 6 } }),
+          api.get("/content"),
+          api.get("/categories"),
+          api.get("/projects", { params: { featured: true, limit: 6 } }),
         ]);
         setContent(contentRes.data.data);
         setCategories(catRes.data.data);
@@ -36,7 +36,7 @@ export default function Home() {
     <>
       <SEO
         title="Custom Signage, Neon Signs & Branding"
-        description="Mystry Signage designs, fabricates and installs custom signboards, neon signs, LED displays, hoardings and vehicle branding."
+        description="Mistry Signage designs, fabricates and installs custom signboards, neon signs, LED displays, hoardings and vehicle branding."
       />
       <Hero data={content?.home_hero} />
       <FeaturedProjects projects={projects} />

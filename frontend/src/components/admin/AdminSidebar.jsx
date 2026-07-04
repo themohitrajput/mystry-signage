@@ -1,14 +1,22 @@
-import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Image, Layers, Inbox, FileText, KeyRound, LogOut } from 'lucide-react';
-import { useAuth } from '../../context/AuthContext';
+import { NavLink } from "react-router-dom";
+import {
+  LayoutDashboard,
+  Image,
+  Layers,
+  Inbox,
+  FileText,
+  KeyRound,
+  LogOut,
+} from "lucide-react";
+import { useAuth } from "../../context/AuthContext";
 
 const links = [
-  { to: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { to: '/admin/projects', label: 'Projects', icon: Image },
-  { to: '/admin/categories', label: 'Categories', icon: Layers },
-  { to: '/admin/content', label: 'Site Content', icon: FileText },
-  { to: '/admin/messages', label: 'Messages', icon: Inbox },
-  { to: '/admin/change-password', label: 'Change Password', icon: KeyRound },
+  { to: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { to: "/admin/projects", label: "Projects", icon: Image },
+  { to: "/admin/categories", label: "Categories", icon: Layers },
+  { to: "/admin/content", label: "Site Content", icon: FileText },
+  { to: "/admin/messages", label: "Messages", icon: Inbox },
+  { to: "/admin/change-password", label: "Change Password", icon: KeyRound },
 ];
 
 export default function AdminSidebar() {
@@ -17,7 +25,9 @@ export default function AdminSidebar() {
   return (
     <aside className="flex h-full w-64 flex-col border-r border-ash/15 bg-panel">
       <div className="border-b border-ash/15 px-6 py-6">
-        <p className="font-display text-lg tube-underline text-amber text-glow-amber">MYSTRY</p>
+        <p className="font-display text-lg tube-underline text-amber text-glow-amber">
+          Mistry
+        </p>
         <p className="mt-1 text-xs text-ash">Admin Dashboard</p>
       </div>
 
@@ -28,7 +38,9 @@ export default function AdminSidebar() {
             to={to}
             className={({ isActive }) =>
               `flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
-                isActive ? 'bg-ink text-amber' : 'text-ash hover:bg-ink hover:text-paper'
+                isActive
+                  ? "bg-ink text-amber"
+                  : "text-ash hover:bg-ink hover:text-paper"
               }`
             }
           >

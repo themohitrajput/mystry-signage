@@ -86,13 +86,13 @@ const run = async () => {
   const defaults = {
     home_hero: {
       heading: 'Signage That Gets You Noticed',
-      subheading: 'Mystry Signage designs, fabricates, and installs custom signs, neon, and branding solutions that make your business impossible to miss.',
+      subheading: 'Mistry Signage designs, fabricates, and installs custom signs, neon, and branding solutions that make your business impossible to miss.',
       buttonText: 'View Our Work',
       buttonLink: '/portfolio',
       image: '',
     },
     home_why_us: {
-      heading: 'Why Businesses Choose Mystry Signage',
+      heading: 'Why Businesses Choose Mistry Signage',
       points: [
         { title: 'End-to-End Service', text: 'From design to installation, we handle everything in-house.' },
         { title: 'Premium Materials', text: 'We use durable, weather-resistant materials built to last.' },
@@ -100,8 +100,8 @@ const run = async () => {
       ],
     },
     about_page: {
-      heading: 'About Mystry Signage',
-      body: 'Mystry Signage is a signage design and fabrication studio helping businesses stand out with custom neon, LED, acrylic, and large-format signage. We combine craftsmanship with modern fabrication technology to deliver signage that lasts.',
+      heading: 'About Mistry Signage',
+      body: 'Mistry Signage is a signage design and fabrication studio helping businesses stand out with custom neon, LED, acrylic, and large-format signage. We combine craftsmanship with modern fabrication technology to deliver signage that lasts.',
       mission: 'To help every business we work with be instantly recognizable.',
       image: '',
     },
@@ -109,12 +109,12 @@ const run = async () => {
       address: 'Indore, Madhya Pradesh, India',
       phone: '+91 90000 00000',
       whatsapp: '919000000000',
-      email: 'hello@mystrysignage.com',
+      email: 'hello@Mistrysignage.com',
       mapEmbedUrl: '',
       businessHours: 'Mon - Sat: 10:00 AM - 7:00 PM',
     },
     site_settings: {
-      siteName: 'Mystry Signage',
+      siteName: 'Mistry Signage',
       tagline: 'Signs that speak for your brand',
       logo: '',
       favicon: '',

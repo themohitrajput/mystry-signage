@@ -4,19 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#14161A',      // near-black background, night-sky base
-        panel: '#1E2128',    // card / raised surface on dark sections
-        paper: '#F5F3EE',    // warm off-white for light sections
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
+        panel: 'rgb(var(--color-panel) / <alpha-value>)',
+        paper: 'rgb(var(--color-paper) / <alpha-value>)',
         amber: {
-          DEFAULT: '#FF7A29', // primary neon-glow accent (warm sign tube)
-          soft: '#FFB27A',
+          DEFAULT: 'rgb(var(--color-amber) / <alpha-value>)',
+          soft: 'rgb(var(--color-amber-soft) / <alpha-value>)',
         },
         cyan: {
-          DEFAULT: '#2FE6E6', // secondary neon accent (cool sign tube)
-          soft: '#8FF2F2',
+          DEFAULT: 'rgb(var(--color-cyan) / <alpha-value>)',
+          soft: 'rgb(var(--color-cyan-soft) / <alpha-value>)',
         },
-        ash: '#9AA0A8',       // muted text on dark
-        slate: '#4B4F58',     // muted text on light
+        ash: 'rgb(var(--color-ash) / <alpha-value>)',
+        slate: 'rgb(var(--color-slate) / <alpha-value>)',
       },
       fontFamily: {
         display: ['"Archivo Black"', 'sans-serif'],
@@ -24,7 +24,7 @@ export default {
         mono: ['"Space Mono"', 'monospace'],
       },
       boxShadow: {
-        neonAmber: '0 0 8px rgba(255,122,41,0.65), 0 0 24px rgba(255,122,41,0.35)',
+        neonAmber: '0 0 8px rgba(33,193,33,0.65), 0 0 24px rgba(33,193,33,0.35)',
         neonCyan: '0 0 8px rgba(47,230,230,0.65), 0 0 24px rgba(47,230,230,0.35)',
       },
       backgroundImage: {

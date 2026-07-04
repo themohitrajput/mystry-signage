@@ -2,12 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+  --color-ink: 15 17 21;
+  --color-panel: 30 33 40;
+  --color-paper: 245 243 238;
+  --color-amber: 33 193 33;
+  --color-amber-soft: 94 226 127;
+  --color-cyan: 47 230 230;
+  --color-cyan-soft: 143 242 242;
+  --color-ash: 154 160 168;
+  --color-slate: 75 79 88;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-ink: 245 243 238;
+  --color-panel: 255 255 255;
+  --color-paper: 20 22 26;
+  --color-ash: 75 79 88;
+  --color-slate: 107 114 128;
+}
+
 html {
   scroll-behavior: smooth;
+  background-color: rgb(var(--color-ink));
+  color: rgb(var(--color-paper));
 }
 
 body {
-  @apply bg-ink text-paper font-body antialiased;
+  @apply font-body antialiased;
+  background-color: rgb(var(--color-ink));
+  color: rgb(var(--color-paper));
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Visible keyboard focus everywhere, incl. custom components */
@@ -45,7 +72,7 @@ body {
 }
 
 .text-glow-amber {
-  text-shadow: 0 0 12px rgba(255, 122, 41, 0.55);
+  text-shadow: 0 0 12px rgba(33, 193, 33, 0.55);
 }
 .text-glow-cyan {
   text-shadow: 0 0 12px rgba(47, 230, 230, 0.55);

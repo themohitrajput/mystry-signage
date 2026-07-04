@@ -1,7 +1,7 @@
 {
-  "name": "mystry-signage-backend",
+  "name": "Mistry-signage-backend",
   "version": "1.0.0",
-  "description": "Backend API for Mystry Signage website (MERN stack)",
+  "description": "Backend API for Mistry Signage website (MERN stack)",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {

@@ -19,7 +19,7 @@ const createMessage = asyncHandler(async (req, res) => {
         replyTo: email,
         subject: `New Website Enquiry: ${subject || 'General'} - ${name}`,
         html: `
-          <h2>New Enquiry - Mystry Signage Website</h2>
+          <h2>New Enquiry - Mistry Signage Website</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
