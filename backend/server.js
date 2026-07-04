@@ -34,7 +34,7 @@ app.use(
 
 app.use(
   cors({
-    origin: "https://Mistry-signage-1.onrender.com",
+    origin: "https://Mystry-signage-1.onrender.com",
     credentials: true,
   })
 );
